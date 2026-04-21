@@ -92,12 +92,12 @@ return {
 		local minutes = math.floor((total_seconds % 3600) / 60)
 		local seconds = total_seconds % 60
 
-		-- Build time string with proper singular/plural
-		local time_str = string.format("%d hour%s %d minute%s %d second%s",
-			hours, hours ~= 1 and "s" or "",
-			minutes, minutes ~= 1 and "s" or "",
-			seconds, seconds ~= 1 and "s" or ""
-		)
+		-- Build time string, omitting zero-value units
+		local parts = {}
+		if hours > 0 then parts[#parts + 1] = hours .. "h" end
+		if minutes > 0 then parts[#parts + 1] = minutes .. "m" end
+		if seconds > 0 or #parts == 0 then parts[#parts + 1] = seconds .. "s" end
+		local time_str = table.concat(parts, " ")
 
 		-- Build the notification content
 		local content = string.format("Found %d video file%s\n\nTotal Duration: %s",
@@ -110,7 +110,7 @@ return {
 			title = "Video Duration",
 			content = content,
 			level = "info",
-			timeout = 8,
+			timeout = 3,
 		})
 	end,
 }
