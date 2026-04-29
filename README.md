@@ -12,7 +12,7 @@ A [Yazi](https://github.com/sxyazi/yazi) plugin to display the total duration of
 
 ## Demo
 
-<video src="https://github.com/tasnimAlam/video-duration.yazi/raw/main/demo.mp4" controls width="100%"></video>
+<video src="https://github.com/user-attachments/assets/f97b7381-08bb-4dc7-b904-0bbe72617bca" controls width="100%"></video>
 
 ## Prerequisites
 
