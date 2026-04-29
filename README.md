@@ -10,6 +10,10 @@ A [Yazi](https://github.com/sxyazi/yazi) plugin to display the total duration of
 - Displays duration in human-readable format (hours, minutes, seconds)
 - Supports wide range of video formats
 
+## Demo
+
+https://github.com/tasnimAlam/video-duration.yazi/raw/main/demo.mp4
+
 ## Prerequisites
 
 - [Yazi](https://github.com/sxyazi/yazi) file manager
